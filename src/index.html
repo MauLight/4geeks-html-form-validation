@@ -1,29 +1,129 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Hello Rigo with Vanilla.js</title>
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
-      integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
-      crossorigin="anonymous"
-    />
-    <link rel="shortcut icon" href="./4geeks.ico" />
-  </head>
-  <body>
-    <div class="container-fluid text-center">
-      <h1 class="mt-5">Hello Rigo!</h1>
-      <img src="./rigo-baby.jpg" />
-      <p class="alert alert-warning mt-4">
-        If this text is <b>not</b> centered and <b>yellow</b>, you probably have
-        an error
-      </p>
-      <div class="fixed-bottom p-4">
-        Made with ❤️ by
-        <a href="https://www.4geeksacademy.com">4Geeks Academy</a>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hello Rigo with Vanilla.js</title>
+  <script src="https://kit.fontawesome.com/ad2c299fee.js" crossorigin="anonymous"></script>
+  <link rel="shortcut icon" href="./4geeks.ico" />
+</head>
+
+<body>
+  <form method="get">
+    <div class="form-row d-flex">
+      <div class="col-md-4 mb-3 px-2">
+        <label for="">Card#</label>
+        <input name="card" class="form-control" id="cardnum" />
+        <small class="invalid-feedback" id="cardFeedback"></small>
+      </div>
+      <div class="col-md-4 mb-3 px-2">
+        <label for="">CVC#</label>
+        <input name="cvc" class="form-control" />
+        <small class="invalid-feedback" id="cvcFeedback"></small>
+      </div>
+      <div class="col-md-4 mb-3 px-2">
+
+        <label for="">Amount</label>
+        <input name="amount" class="form-control" />
+        <small class="invalid-feedback" id="amountFeedback"></small>
+
+
       </div>
     </div>
-  </body>
+    </div>
+    <div class="form-row d-flex">
+      <div class="col-md-6 mb-3 px-2">
+
+        <label for="">First Name</label>
+        <input id="firstname" name="firstname" class="form-control" />
+        <small class="invalid-feedback" id="firstFeedback"></small>
+
+
+      </div>
+      <div class="col-md-6 mb-3 px-2">
+
+        <label for="">Last Name</label>
+        <input id="lastname" name="lastname" class="form-control" />
+        <small class="invalid-feedback" id="lastFeedback"></small>
+
+
+      </div>
+    </div>
+    <div class="form-row d-flex">
+      <div class="col-md-6 mb-3 px-2">
+
+        <label for="">City</label>
+        <input id="city" name="city" type="text" class="form-control" />
+        <small class="invalid-feedback" id="cityFeedback"></small>
+
+      </div>
+
+      <div class="col-3 px-2">
+        <label for="inputState">State</label>
+        <select name="state" id="inputState" class="form-control required">
+          <option disabled="disabled" value="" selected>Pick a state</option>
+          <option value="1">Miami</option>
+          <option value="2">Los Angeles</option>
+          <option value="3">New York</option>
+        </select>
+        <small class="invalid-feedback" id="stateFeedback"></small>
+      </div>
+      <div class="col-3 px-2">
+        <label for="">Postal Code</label>
+        <input id="postal" name="postal" type="number" class="form-control" />
+        <small class="invalid-feedback" id="postalFeedback"></small>
+      </div>
+    </div>
+
+    <div class="form-row d-flex">
+
+      <div class="col-6 d-inline-table mt-4">
+        <label for="">We Accept:</label>
+        <div class="wrap d-flex">
+          <div class="col d-flex p-0">
+            <div class="input-group-text justify-content-center w-100 py-2">
+              <input value="mastercard" id="1" name="cardtype" type="radio"
+                aria-label="Radio button for following text input" />
+              <i class="fa-brands fa-cc-mastercard"></i>
+            </div>
+          </div>
+          <div class="col d-flex p-0">
+            <div class="input-group-text justify-content-center w-100 py-2">
+              <input value="diners" id="2" name="cardtype" type="radio"
+                aria-label="Radio button for following text input" />
+              <i class="fa-brands fa-cc-diners-club"></i>
+            </div>
+          </div>
+          <div class="col d-flex p-0">
+            <div class="input-group-text justify-content-center w-100 py-2">
+              <input value="visa" id="3" name="cardtype" type="radio"
+                aria-label="Radio button for following text input" />
+              <i class="fa-brands fa-cc-visa"></i>
+            </div>
+          </div>
+          <div class="col d-flex p-0">
+            <div class="input-group-text justify-content-center w-100 py-2">
+              <input value="american" id="4" name="cardtype" type="radio"
+                aria-label="Radio button for following text input" />
+              <i class="fa-brands fa-cc-amex"></i>
+            </div>
+          </div>
+
+          <div class="col">
+            <small class="invalid-feedback" id="cardtypeFeedback"></small>
+          </div>
+
+        </div>
+
+      </div>
+
+
+
+
+
+      <button class="btn btn-primary" type="submit">Submit form</button>
+  </form>
+</body>
+
 </html>
