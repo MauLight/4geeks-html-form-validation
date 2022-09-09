@@ -37,7 +37,6 @@ form.addEventListener("submit", e => {
 
   if (card.value === "") {
     errors["card"] = "Ingresa el número de la tarjeta";
-    console.log(errors);
     card.classList.add("is-invalid");
   } else if (!regexCard.test(card.value)) {
     errors["card"] = "Ingresa el número de la tarjeta";
@@ -126,6 +125,10 @@ form.addEventListener("submit", e => {
     errors["postal"] ||
     errors["cardtype"]
   ) {
+    let title = document.querySelector("#title");
+    title.classList.remove("bg-warning");
+    title.classList.add("bg-danger");
+    title.innerHTML = "Add the goddamn information!";
     if (errors["card"]) cardFeed.innerHTML = errors["card"];
     if (errors["cvc"]) cvcFeed.innerHTML = errors["cvc"];
     if (errors["amount"]) amountFeed.innerHTML = errors["amount"];
@@ -136,14 +139,29 @@ form.addEventListener("submit", e => {
     if (errors["postal"]) postalFeed.innerHTML = errors["postal"];
     if (errors["cardtype"]) cardtypeFeed.innerHTML = errors["cardtype"];
   } else {
-    e.target.submit();
+    title.innerHTML = "Thanks for your cooperation!";
+    if ((title.classList = "bg-warning")) {
+      title.classList.remove("bg-warning");
+      title.classList.add("bg-success");
+      title.classList.add("col-12");
+      title.classList.add("p-4");
+      title.classList.add("mb-3");
+      e.target.submit();
+    } else {
+      title.classList.remove("bg-warning");
+      title.classList.add("bg-success");
+      title.classList.add("col-12");
+      title.classList.add("p-4");
+      title.classList.add("mb-3");
+      e.target.submit();
+    }
   }
 
-  console.log(errors);
+  // console.log(errors);
 });
 
 //Delete starting here if you must
-
+/*
 const x = [1, 2, 3, 4, 5];
 const [y, z, ...rest] = x;
 console.log(y);
@@ -268,3 +286,4 @@ const props = [
 
 const [, , { name }] = props;
 console.log(name);
+*/

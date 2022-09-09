@@ -10,120 +10,135 @@
 </head>
 
 <body>
-  <form method="get">
-    <div class="form-row d-flex">
-      <div class="col-md-4 mb-3 px-2">
-        <label for="">Card#</label>
-        <input name="card" class="form-control" id="cardnum" />
-        <small class="invalid-feedback" id="cardFeedback"></small>
-      </div>
-      <div class="col-md-4 mb-3 px-2">
-        <label for="">CVC#</label>
-        <input name="cvc" class="form-control" />
-        <small class="invalid-feedback" id="cvcFeedback"></small>
-      </div>
-      <div class="col-md-4 mb-3 px-2">
+  <div class="container w-75 border rounded mt-5">
+    <div class="row">
+      <div id="title" class="col-12 p-4 mb-3 bg-warning" style="color: white;">Payment Form Example</div>
+      <div class="col-12">
+        <form method="get" id="payme">
+          <div class="form-row d-flex">
+            <div class="col-md-4 mb-3 px-2">
+              <label for="">Card#</label>
+              <input name="card" class="form-control" id="cardnum" />
+              <small class="invalid-feedback" id="cardFeedback"></small>
+            </div>
+            <div class="col-md-4 mb-3 px-2">
+              <label for="">CVC#</label>
+              <input name="cvc" class="form-control" />
+              <small class="invalid-feedback" id="cvcFeedback"></small>
+            </div>
+            <div class="col-md-4 mb-3 px-2">
 
-        <label for="">Amount</label>
-        <input name="amount" class="form-control" />
-        <small class="invalid-feedback" id="amountFeedback"></small>
-
-
-      </div>
-    </div>
-    </div>
-    <div class="form-row d-flex">
-      <div class="col-md-6 mb-3 px-2">
-
-        <label for="">First Name</label>
-        <input id="firstname" name="firstname" class="form-control" />
-        <small class="invalid-feedback" id="firstFeedback"></small>
+              <label for="">Amount</label>
+              <input name="amount" class="form-control" />
+              <small class="invalid-feedback" id="amountFeedback"></small>
 
 
-      </div>
-      <div class="col-md-6 mb-3 px-2">
-
-        <label for="">Last Name</label>
-        <input id="lastname" name="lastname" class="form-control" />
-        <small class="invalid-feedback" id="lastFeedback"></small>
-
-
-      </div>
-    </div>
-    <div class="form-row d-flex">
-      <div class="col-md-6 mb-3 px-2">
-
-        <label for="">City</label>
-        <input id="city" name="city" type="text" class="form-control" />
-        <small class="invalid-feedback" id="cityFeedback"></small>
-
-      </div>
-
-      <div class="col-3 px-2">
-        <label for="inputState">State</label>
-        <select name="state" id="inputState" class="form-control required">
-          <option disabled="disabled" value="" selected>Pick a state</option>
-          <option value="1">Miami</option>
-          <option value="2">Los Angeles</option>
-          <option value="3">New York</option>
-        </select>
-        <small class="invalid-feedback" id="stateFeedback"></small>
-      </div>
-      <div class="col-3 px-2">
-        <label for="">Postal Code</label>
-        <input id="postal" name="postal" type="number" class="form-control" />
-        <small class="invalid-feedback" id="postalFeedback"></small>
-      </div>
-    </div>
-
-    <div class="form-row d-flex">
-
-      <div class="col-6 d-inline-table mt-4">
-        <label for="">We Accept:</label>
-        <div class="wrap d-flex">
-          <div class="col d-flex p-0">
-            <div class="input-group-text justify-content-center w-100 py-2">
-              <input value="mastercard" id="1" name="cardtype" type="radio"
-                aria-label="Radio button for following text input" />
-              <i class="fa-brands fa-cc-mastercard"></i>
             </div>
           </div>
-          <div class="col d-flex p-0">
-            <div class="input-group-text justify-content-center w-100 py-2">
-              <input value="diners" id="2" name="cardtype" type="radio"
-                aria-label="Radio button for following text input" />
-              <i class="fa-brands fa-cc-diners-club"></i>
-            </div>
-          </div>
-          <div class="col d-flex p-0">
-            <div class="input-group-text justify-content-center w-100 py-2">
-              <input value="visa" id="3" name="cardtype" type="radio"
-                aria-label="Radio button for following text input" />
-              <i class="fa-brands fa-cc-visa"></i>
-            </div>
-          </div>
-          <div class="col d-flex p-0">
-            <div class="input-group-text justify-content-center w-100 py-2">
-              <input value="american" id="4" name="cardtype" type="radio"
-                aria-label="Radio button for following text input" />
-              <i class="fa-brands fa-cc-amex"></i>
-            </div>
-          </div>
+      </div>
+      <div class="form-row d-flex">
+        <div class="col-md-6 mb-3 px-2">
 
-          <div class="col">
-            <small class="invalid-feedback" id="cardtypeFeedback"></small>
+          <label for="">First Name</label>
+          <input id="firstname" name="firstname" class="form-control" />
+          <small class="invalid-feedback" id="firstFeedback"></small>
+
+
+        </div>
+        <div class="col-md-6 mb-3 px-2">
+
+          <label for="">Last Name</label>
+          <input id="lastname" name="lastname" class="form-control" />
+          <small class="invalid-feedback" id="lastFeedback"></small>
+
+
+        </div>
+      </div>
+      <div class="form-row d-flex">
+        <div class="col-md-6 mb-3 px-2">
+
+          <label for="">City</label>
+          <input id="city" name="city" type="text" class="form-control" />
+          <small class="invalid-feedback" id="cityFeedback"></small>
+
+        </div>
+
+        <div class="col-3 px-2">
+          <label for="inputState">State</label>
+          <select name="state" id="inputState" class="form-control required">
+            <option disabled="disabled" value="" selected>Pick a state</option>
+            <option value="1">Miami</option>
+            <option value="2">Los Angeles</option>
+            <option value="3">New York</option>
+          </select>
+          <small class="invalid-feedback" id="stateFeedback"></small>
+        </div>
+        <div class="col-3 px-2">
+          <label for="">Postal Code</label>
+          <input id="postal" name="postal" type="number" class="form-control" />
+          <small class="invalid-feedback" id="postalFeedback"></small>
+        </div>
+      </div>
+
+      <div class="form-row d-flex">
+
+        <div class="col-6 d-inline-table mt-1">
+          <label class="mb-2" for="">We Accept:</label>
+          <div class="wrap d-flex">
+            <div class="col d-flex p-0">
+              <div class="input-group-text justify-content-center w-100 py-2">
+                <input value="mastercard" id="1" name="cardtype" type="radio"
+                  aria-label="Radio button for following text input" />
+                <i class="fa-brands fa-cc-mastercard"></i>
+              </div>
+            </div>
+            <div class="col d-flex p-0">
+              <div class="input-group-text justify-content-center w-100 py-2">
+                <input value="diners" id="2" name="cardtype" type="radio"
+                  aria-label="Radio button for following text input" />
+                <i class="fa-brands fa-cc-diners-club"></i>
+              </div>
+            </div>
+            <div class="col d-flex p-0">
+              <div class="input-group-text justify-content-center w-100 py-2">
+                <input value="visa" id="3" name="cardtype" type="radio"
+                  aria-label="Radio button for following text input" />
+                <i class="fa-brands fa-cc-visa"></i>
+              </div>
+            </div>
+            <div class="col d-flex p-0">
+              <div class="input-group-text justify-content-center w-100 py-2">
+                <input value="american" id="4" name="cardtype" type="radio"
+                  aria-label="Radio button for following text input" />
+                <i class="fa-brands fa-cc-amex"></i>
+              </div>
+            </div>
+
+            <div class="col" style="padding-left: 50px;">
+              <small class="invalid-feedback" id="cardtypeFeedback"></small>
+            </div>
+
           </div>
 
         </div>
 
+        <div class="form-group w-100 px-2">
+          <label for="exampleFormControlTextarea1">Message</label>
+          <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+        </div>
+
+
+
+        </form>
+
       </div>
+      <div class="bg-secondary py-3 mt-3 col-12 rounded-bottom">
+        <button form="payme" class="btn btn-primary m-1" type="submit" style="float: right;">Send</button>
+        <button class="btn btn-dark m-1" type="submit" style="float: right;">Cancel</button>
+      </div>
+    </div>
+  </div>
 
-
-
-
-
-      <button class="btn btn-primary" type="submit">Submit form</button>
-  </form>
 </body>
 
 </html>
