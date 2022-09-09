@@ -2,6 +2,10 @@
 import "bootstrap";
 import "./style.css";
 
+window.onload = function() {
+  alert("it only validates VISA cards with USA zipcodes");
+};
+
 let form = document.querySelector("form");
 form.addEventListener("submit", e => {
   e.preventDefault();
@@ -36,10 +40,10 @@ form.addEventListener("submit", e => {
   } = e.target; //e.target = form;
 
   if (card.value === "") {
-    errors["card"] = "Ingresa el número de la tarjeta";
+    errors["card"] = "Enter card number";
     card.classList.add("is-invalid");
   } else if (!regexCard.test(card.value)) {
-    errors["card"] = "Ingresa el número de la tarjeta";
+    errors["card"] = "Enter card number";
     card.classList.add("is-invalid");
   } else {
     card.classList.remove("is-invalid");
@@ -47,19 +51,19 @@ form.addEventListener("submit", e => {
   }
 
   if (cvc.value === "" || !regexNum.test(cvc.value)) {
-    errors["cvc"] = "Ingresa el número de seguridad";
+    errors["cvc"] = "Enter cvc";
     cvc.classList.add("is-invalid");
     //alert("CVC Add up to 3 numbers");
   } else if (cvc.value.length === 3 && regexNum.test(cvc.value)) {
     cvc.classList.remove("is-invalid");
     cvc.classList.add("is-valid");
   } else {
-    errors["cvc"] = "Ingresa el número de seguridad";
+    errors["cvc"] = "Enter cvc";
     cvc.classList.add("is-invalid");
   }
 
   if (amount.value === "" || !regexNum.test(amount.value)) {
-    errors["amount"] = "Ingresa la cantidad deseada";
+    errors["amount"] = "Enter desired amount";
     amount.classList.add("is-invalid");
     //alert("add an amount expressed in numbers");
   } else if (regexNum.test(amount.value)) {
@@ -68,7 +72,7 @@ form.addEventListener("submit", e => {
   }
 
   if (firstname.value === "" || !regexLetter.test(firstname.value)) {
-    errors["firstname"] = "Ingresa nombre";
+    errors["firstname"] = "Enter name";
     firstname.classList.add("is-invalid");
     //alert("Add a name using only letters.");
   } else if (regexLetter.test(firstname.value)) {
@@ -76,7 +80,7 @@ form.addEventListener("submit", e => {
     firstname.classList.add("is-valid");
   }
   if (lastname.value === "" || !regexLetter.test(lastname.value)) {
-    errors["lastname"] = "Ingresa apellido";
+    errors["lastname"] = "Enter last name";
     lastname.classList.add("is-invalid");
     //alert("Add a last name using only letters.");
   } else if (regexLetter.test(lastname.value)) {
@@ -84,7 +88,7 @@ form.addEventListener("submit", e => {
     lastname.classList.add("is-valid");
   }
   if (city.value === "" || !regexLetter.test(city.value)) {
-    errors["city"] = "Ingresa tu ciudad";
+    errors["city"] = "Enter city";
     city.classList.add("is-invalid");
     //alert("Add a City name.");
   } else if (regexLetter.test(city.value)) {
@@ -92,7 +96,7 @@ form.addEventListener("submit", e => {
     city.classList.add("is-valid");
   }
   if (!state.value) {
-    errors["state"] = "Selecciona tu estado";
+    errors["state"] = "Select state";
     state.classList.add("is-invalid");
   } else {
     state.classList.remove("is-invalid");
@@ -100,7 +104,7 @@ form.addEventListener("submit", e => {
   }
 
   if (postal.value === "" || !regexPostal.test(postal.value)) {
-    errors["postal"] = "Ingresa código postal";
+    errors["postal"] = "Enter zip-code";
     postal.classList.add("is-invalid");
   } else {
     postal.classList.remove("is-invalid");
@@ -108,8 +112,8 @@ form.addEventListener("submit", e => {
   }
 
   if (!cardtype.value) {
-    errors["cardtype"] = "Selecciona una tarjeta de crédito";
-    alert("Selecciona tarjeta de crédito");
+    errors["cardtype"] = "Select credit card type";
+    alert("Select credit card type");
   } else {
     console.log(cardtype.value);
   }
